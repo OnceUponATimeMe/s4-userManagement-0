@@ -15,8 +15,8 @@
 					      <a class="navbar-brand" href="#">Bienvenue !</a>
 					   	</div>
 					   	<ul class="nav navbar-nav">
-							<li><a href="index.php">Roles</a></li>
-							<li><a href="users/index.php.php">Users</a></li>
+							<li><a href="roles/index.php">Roles</a></li>
+							<li><a href="index.php">Users</a></li>
 							<li><a href="urls/index.php">Urls</a></li>
 						</ul>
 					</div>
@@ -25,7 +25,7 @@
 			<div class="container">
 				<table class="table table-striped custab table-bordered table-hover">
 					<caption>Liste des roles</caption>
-						<th>ID</th>
+						<th>Login</th>
 						<th>NAME</th>
 						<th>NOMBRE D'UTILISATEURS</th>
 						<th>SUPPRIMER</th>

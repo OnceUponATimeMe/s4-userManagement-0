@@ -1,0 +1,16 @@
+a {
+cursor : pointer;
+}
+
+table {
+	border-collapse: separate;
+    border-spacing: 1em;
+}
+
+#formAjout {
+	margin-top: 3%;
+}
+
+#modification {
+	margin-top: 3%;
+}
