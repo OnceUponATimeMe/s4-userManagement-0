@@ -15,47 +15,52 @@
 					      <a class="navbar-brand" href="#">Bienvenue !</a>
 					   	</div>
 					   	<ul class="nav navbar-nav">
-							<li><a href="roles/index.php">Roles</a></li>
+							<li><a href="../role/index.php">Roles</a></li>
 							<li><a href="index.php">Users</a></li>
-							<li><a href="urls/index.php">Urls</a></li>
+							<li><a href="../url/index.php">Urls</a></li>
 						</ul>
 					</div>
 				</nav>
 			</header>
-			<div class="container">
+			<div class="container" id = "ListePersonne">
 				<table class="table table-striped custab table-bordered table-hover">
 					<caption>Liste des roles</caption>
 						<th>Login</th>
-						<th>NAME</th>
-						<th>NOMBRE D'UTILISATEURS</th>
-						<th>SUPPRIMER</th>
-						<th>MODIFIER</th>
+						<th>firstname</th>
+						<th>lastname</th>
+						<th>email</th>
+						<th>idrole</th>
+						<th>Supprimer</th>
+						<th>Modifier</th>
 
 					<?php
 						include '../config.php';
 
-						$listeRoles = "SELECT * from role";
+						$listeRoles = "SELECT * from user";
 
-						$roles = $bdd->query($listeRoles);
+						$users = $bdd->query($listeRoles);
 
-						foreach($roles as $element)
+						foreach($users as $element)
 						{
 
-							$nbUtilisateurs = $bdd->query("SELECT count(*) from user where idrole =".$element['id']);
-
-							$nbUtilisateurs = $nbUtilisateurs->fetch();
 
 					?>
 						
 					<tr>
 						<td>
-							<?php echo $element['id'];?>
+							<?php echo $element['login'];?>
 						</td>
 						<td>
-							<a data-toggle="collapse" data-target="#role<?php echo $element['name'];?>"><?php echo $element['name'];?></a>
+							<a data-toggle="collapse" data-target="#role<?php echo $element['firstname'];?>"><?php echo $element['firstname'];?></a>
 						</td>
 						<td>
-							<?php echo $nbUtilisateurs[0].' personnes';?>
+							<?php echo $element['lastname'];?>
+						</td>
+						<td>
+							<?php echo $element['email'];?>
+						</td>
+						<td>
+							<?php echo $element['idrole'];?>
 						</td>
 						<td>
 				 			
@@ -64,7 +69,7 @@
 				 		</td>
 				 			
 				 		<td>
-				 			<a href="index.php?id=<?php echo $element['id'];?>&amp;name=<?php echo $element['name'];?> " ><img style="width:30px;" class="ico-modification" src="../Images/modification.png"></a>
+				 			<a href="index.php?id=<?php echo $element['id'];?>" ><img style="width:30px;" class="ico-modification" src="../Images/modification.png"></a>
 				 		
 				 		</td>
 					</tr>

@@ -16,8 +16,8 @@
 					   	</div>
 					   	<ul class="nav navbar-nav">
 							<li><a href="index.php">Roles</a></li>
-							<li><a href="users/index.php.php">Users</a></li>
-							<li><a href="urls/index.php">Urls</a></li>
+							<li><a href="../users/index.php">Users</a></li>
+							<li><a href="../url/index.php">Urls</a></li>
 						</ul>
 					</div>
 				</nav>

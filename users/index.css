@@ -14,3 +14,8 @@ table {
 #modification {
 	margin-top: 3%;
 }
+
+#ListePersonne {
+height : 500px;
+overflow:scroll;
+}
